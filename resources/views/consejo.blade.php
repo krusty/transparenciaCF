@@ -7,7 +7,7 @@
 <h3>CONSEJALES</h3>
     <div class="row">
       @foreach ($destacados as $destacado)
-      <div class="col-sm-6 col-md-4">
+      <div class="col-md-4">
         <div class="thumbnail">
           <img src="/media/fotos/{{ $destacado->foto }}" alt="{{ $destacado->nombre }}">
           <div class="caption">
@@ -24,7 +24,7 @@
       @endforeach
     </div>
 <h3>EQUIPO</h3>
-<table class="table table-hover">
+<table class="table table-hover table-responsive">
     <thead>
         <tr><th>Area</th> <th>Nombre</th> <th>Sueldo</th> <th>Donación</th> </tr>
     </thead>
@@ -38,7 +38,6 @@
             @foreach ($area->personas->splice(1) as $persona)
             <tr><td>{{ $persona->nombre }}</td> <td>${{ $persona->sueldo }}</td> <td>${{ $persona->aporte }}</td></tr>
             @endforeach
-        </tr>
         @endif
         @endforeach
     </tbody>

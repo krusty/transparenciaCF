@@ -157,6 +157,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Serverfireteam\Panel\PanelServiceProvider::class,
 
+        Barryvdh\Debugbar\ServiceProvider::class,
+
         Orangehill\Iseed\IseedServiceProvider::class
     ],
 

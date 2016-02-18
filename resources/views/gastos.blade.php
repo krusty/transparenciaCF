@@ -7,7 +7,7 @@
 <h3>INGRESOS</h3>
 
 
-<table class="table table-hover">
+<table class="table table-hover table-responsive">
     <thead>
         <tr><th class="col-md-1">Año</th> <th class="col-md-1">Mes</th> <th>Descripción</th> <th style="text-align: right">Monto</th> </tr>
     </thead>
