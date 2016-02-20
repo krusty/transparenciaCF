@@ -8,20 +8,11 @@ use App\Http\Controllers\Controller;
 class GastosController extends Controller{
 
     public function show(){
-        $meses = [
-            '01' => 'Enero',
-            '02' => 'Febrero',
-            '03' => 'Marzo',
-            '04' => 'Abril',
-            '05' => 'Mayo',
-            '06' => 'Junio',
-            '07' => 'Julio',
-            '08' => 'Agosto',
-            '09' => 'Septiembre',
-            '10' => 'Octubre',
-            '11' => 'Noviembre',
-            '12' => 'Diciembre',
-        ];
+        $meses = [ '01' => 'Enero', '02' => 'Febrero', '03' => 'Marzo',
+            '04' => 'Abril', '05' => 'Mayo', '06' => 'Junio', '07' => 'Julio',
+            '08' => 'Agosto', '09' => 'Septiembre', '10' => 'Octubre',
+            '11' => 'Noviembre', '12' => 'Diciembre'];
+
         $movimientos = Movement::all()->where('tipo', 'egreso')
             ->groupBy(function($item) {
                 return date('Y', strtotime($item->fecha));
@@ -39,5 +30,9 @@ class GastosController extends Controller{
         return view('ingresos', ['tab' => 'gastos'])
             ->with('movimientos', $movimientos)
             ->with('meses', $meses);
+    }
+
+    public function nuevoGasto(){
+        
     }
 }

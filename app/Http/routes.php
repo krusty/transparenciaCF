@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('inicio', ['tab' => 'inicio']);
 });
 
-Route::get('consejo', 'ConsejoController@show');
-Route::get('ingresos', 'IngresosController@show');
-Route::get('gastos', 'GastosController@show');
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +28,14 @@ Route::get('gastos', 'GastosController@show');
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('consejo', 'ConsejoController@show');
+    Route::get('ingresos', 'IngresosController@show');
+    Route::get('gastos', 'GastosController@show');
+    Route::get('cargar', 'GastosController@new');
+
+    Route::get('auth/google', 'SocialAuthController@redirectToProvider');
+    Route::get('auth/google/callback', 'SocialAuthController@handleProviderCallback');
+    Route::get('/logout', 'SocialAuthController@logout');
+
+    Route::any('/cargar', 'ConsejoController@cargaGasto');
 });

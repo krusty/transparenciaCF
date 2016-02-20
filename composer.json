@@ -8,7 +8,9 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "orangehill/iseed": "dev-master",
-        "serverfireteam/panel": "1.4.*"
+        "serverfireteam/panel": "1.4.*",
+        "zofe/rapyd": "2.2.*",
+        "laravel/socialite": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

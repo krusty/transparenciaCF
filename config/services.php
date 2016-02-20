@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => '39658383563-5pt66cggghp8m0uh8qt7eloi7hdfi67d.apps.googleusercontent.com',
+        'client_secret' => 'LIffBQ97PBGBCr7QDwPeASbr',
+        'redirect' => 'http://transparencia.app:8000/auth/google/callback',
+        'redirect_uri' => 'http://transparencia.app:8000/auth/google/callback'
+    ],
 ];
